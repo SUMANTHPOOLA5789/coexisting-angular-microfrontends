@@ -1,23 +1,40 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+
+<div style="text-align: center; padding: 2rem; font-family: Arial;">
+  <h1 style="font-size: 3rem;">App1</h1>
+  <p style="font-size: 1.2rem;">Version: v{{version}}</p>
+  <p>This is a micro-frontend running on Angular 8.</p>
+
+  <div style="margin-top: 2rem; font-weight: bold;" *ngIf="receivedMsg">
+    <p>Message from App3:</p>
+    <p style="font-size: 1.5rem; color: #28a745;">{{ receivedMsg }}</p>
+  </div>
+
+  <div style="margin-top: 2rem;">
+    <input type="text" [(ngModel)]="message" placeholder="Enter message for App3"
+      style="padding: 0.5rem; width: 300px;" />
+    <button (click)="sendDataToApp3()" style="padding: 0.5rem 1rem; margin-left: 1rem;">Send to App3</button>
+  </div>
+
+  <div style="margin-top: 2rem;">
+    <a routerLink="/app3" style="cursor: pointer; font-weight: bold; color: #007bff;">Navigate to App3</a>
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<img [src]="yoshiUrl" />
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-<a routerLink="/app2">
-  To App 2 from app1
-</a>
+<!-- <div class="container">
+  <p>Application Name   : <strong>{{title}}</strong></p>
+  <p>Angular CLI Version: <strong>{{version}}</strong></p>
+
+</div>
+
+<br>
+<br>
+<div class="container-data">
+  <input type="text" style="margin-left: 10px;" [(ngModel)]="name">
+  <button class="send-btn" (click)="sendDataToApp2()">Send Data</button>
+</div>
+
+<br>
+<br>
+<a class="nav-link" routerLink="/app2">
+  navigate to App2
+</a> -->

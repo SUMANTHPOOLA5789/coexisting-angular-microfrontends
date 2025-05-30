@@ -1,0 +1,18 @@
+.send-btn {
+    background-color: aquamarine;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 5px 10px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.1s ease, box-shadow 0.2s ease;
+  }
+  
+  .send-btn:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .send-btn:active {
+    transform: scale(0.95);
+  }

@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/joeldenning/coexisting-angular-microfrontends.svg?branch=master)](https://travis-ci.org/joeldenning/coexisting-angular-microfrontends)
 
 # Coexisting Angular Microfrontends
+
 Demo: http://coexisting-angular-microfrontends.surge.sh
 
 This is a starter-kit / example repository for people who want to have multiple angular microfrontends coexist within a single page. Each
@@ -12,11 +13,13 @@ additional microfrontends.
 For mapping routes to applications it uses [single-spa-layout](https://single-spa.github.io/single-spa.js.org/docs/layout-overview/).
 
 ## An important note
+
 This github repository has four projects all in one repo. But when you do this yourself, **you'll want to have one git repo per
 angular application**. The root-html-file project should also be in its own repo. This is what lets different teams and developers be in
 charge of different microfrontends.
 
 ## Local development -- one app at a time
+
 [Tutorial video](https://www.youtube.com/watch?v=vjjcuIxqIzY&list=PLLUD8RtHvsAOhtHnyGx57EYXoaNsxGrTU&index=4)
 
 With single-spa, it is preferred to run `ng serve` in only one single-spa application at a time, while using a deployed
@@ -24,6 +27,7 @@ version of the other applications. This makes for an awesome developer experienc
 microfrontend at a time, not even having to clone, npm install, or boot up all of the other ones.
 
 To try this out, clone the repo and run the following commands:
+
 ```sh
 cd app1
 npm i
@@ -34,6 +38,7 @@ Now go to http://coexisting-angular-microfrontends.surge.sh in a browser. Click 
 reload the page on coexisting-angular-microfrontends.surge.sh. See https://github.com/joeldenning/import-map-overrides for more info on this.
 
 ## Local development -- all at once
+
 It is preferred to only run one app at a time. But if you need to run them all locally, you can do so with the following instructions
 
 ```sh
@@ -42,6 +47,7 @@ cd root-html-file
 npm install
 npm start
 ```
+
 ```sh
 # Second terminal tab
 cd app1
@@ -52,6 +58,13 @@ npm start
 ```sh
 # Third terminal tab
 cd app2
+npm install
+npm start
+```
+
+```sh
+# Fifth terminal tab
+cd app3
 npm install
 npm start
 ```
@@ -73,4 +86,5 @@ import-map-overrides library is already loaded in the index.html of root-html-fi
 deployed environment overridable, just like you can do overrides on http://coexisting-angular-microfrontends.surge.sh
 
 ## More documentation
+
 Go to https://github.com/CanopyTax/single-spa-angular to learn how all of this works.

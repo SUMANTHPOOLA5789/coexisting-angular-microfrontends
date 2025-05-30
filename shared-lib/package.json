@@ -1,0 +1,22 @@
+{
+  "name": "shared-lib",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/shared-lib.js",
+  "scripts": {
+    "build": "rollup -c",
+    "start": "npx http-server -p 9000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rxjs": "^7.8.2"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^12.1.2",
+    "rollup": "^4.0.2",
+    "typescript": "^5.4.3"
+  },
+  "description": ""
+}

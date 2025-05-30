@@ -8,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class PrimaryNavComponent implements OnInit {
 
   constructor() { }
+  
 
   ngOnInit() {
+  }
+
+  isActive(path: string): boolean {
+    return window.location.pathname.startsWith(path);
   }
 
 }

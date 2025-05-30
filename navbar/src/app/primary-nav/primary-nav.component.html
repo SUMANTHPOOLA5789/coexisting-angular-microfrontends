@@ -1,4 +1,17 @@
-<nav>
+<div class="topnav">
+  <a [routerLinkActive]="'active'" routerLink="/app1">App 1 <small>Angular8</small></a>
+  <!-- <a [routerLinkActive]="'active'" routerLink="/app2">App 2 <small>Angular8</small></a> -->
+  <a [routerLinkActive]="'active'" routerLink="/app3">App 3 <small>Angular19</small></a>
+</div>
+
+<!-- <div class="topnav">
+  <a href="/app1" class="{{ isActive('/app1') ? 'active' : '' }}">App 1</a>
+  <a href="/app2" class="{{ isActive('/app2') ? 'active' : '' }}">App 2</a>
+  <a href="/app3" class="{{ isActive('/app3') ? 'active' : '' }}">App 3</a>
+</div> -->
+
+<!-- <nav>
+
   <li>
     <a routerLink="/">
       Home
@@ -14,4 +27,9 @@
       App 2
     </a>
   </li>
-</nav>
+  <li>
+    <a routerLink="/app3">
+      App 3
+    </a>  
+  </li>
+</nav> -->

@@ -1,0 +1,23 @@
+<div style="text-align: center; padding: 2rem; font-family: Arial;">
+    <h1 style="font-size: 3rem;">App3</h1>
+    <p style="font-size: 1.2rem;">Version: v{{version}}</p>
+    <p>This is an Angular 19 standalone micro-frontend.</p>
+
+    <div style="margin-top: 2rem; font-weight: bold;" *ngIf="receivedMsg">
+        <p>Message from App1:</p>
+        <p style="font-size: 1.5rem; color: #28a745;">{{ receivedMsg }}</p>
+    </div>
+
+
+    <div style="margin-top: 2rem;">
+        <input type="text" [(ngModel)]="message" placeholder="Enter message for App1"
+            style="padding: 0.5rem; width: 300px;" />
+        <button (click)="sendDataToApp1()" style="padding: 0.5rem 1rem; margin-left: 1rem;">Send to App1</button>
+    </div>
+    
+
+
+    <div style="margin-top: 2rem;">
+        <a (click)="navigateToApp1($event)" style="text-decoration: underline;cursor: pointer; font-weight: bold; color: #007bff;">Navigate to App1</a>
+    </div>
+</div>
